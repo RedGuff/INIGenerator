@@ -22,15 +22,17 @@ int main() {
         cerr << "Impossible to write the file: " << fileOut << endl;
         }
     else {
+        int data = 0;
         for(int a = 1; a < nbNames + 1; a++) {
             cout << "[Name" << a << "]" << endl;
             outfile << "[Name" << a << "]" << endl;
             for(int b = 1; b < nbVars + 1; b++) {
-                cout << "var" << b << " = " << rand() % (maxData - minData + 1) + minData   << endl;
-                outfile << "var" << b << " = " << rand() % (maxData - minData + 1) + minData   << endl;
+                data = rand() % (maxData - minData + 1) + minData; 
+                cout << "var" << b << " = " << data  << endl;
+                outfile << "var" << b << " = " << data << endl;
                 }
-            cout << "" << endl;
-            outfile << "" << endl;
+            cout << endl;
+            outfile << endl;
             }
         }
     cout << "Ok!" << endl;
